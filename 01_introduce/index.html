@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title> <!-- 웹앱에서는 무의미-->
+
+	<!-- Jquery Mobile Framework적용-->
+	<!-- 방법1. CDN : 순서 중요... Webapp개발시 사용.-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- 방법2. 라이브러리 파일 다운로드 방식 -->
+	<!-- <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" scr="jquery.js"></script>
+	<script type="text/javascript" scr="jquery.mobile-1.4.5.min.js"></script> -->
+
+	<!-- 뷰포트 작업 : 교재 4 chapter참고..-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+	<!-- 모바일 한 페이지(like. Activity) 만들기.-->
+	<div data-role="page" id="page1">
+		<!-- 1. Header영역 (Appbar의 역할) -->
+		<div data-role="header">
+			<!-- 페이지 제목 -->
+			<!-- h1~h6가 모두 같은 크기 .. -->
+			<h2>This is Header</h2>
+		</div>
+
+		<!-- 2. Content영역 (View의 영역) -->
+		<div data-role="content">	
+			<p>This is Content region.</p>
+
+			<a href="#page2" data-role="button">Go to Page2</a>
+
+			<a href="page3.html" data-role="button" data-transition="slide">Go to Page3</a>	
+
+		</div>
+
+		<!-- 3. Footer영역-->
+		<div data-role="footer">	
+			<h4>This is footer</h4>		
+		</div>		
+	</div>
+
+
+	<!-- 두번째 페이지 (secondActivity...) -->
+	<div data-role="page" id="page2">
+		<div data-role="header" data-theme="b">
+			<h2>Second Page</h2>
+		</div>		
+
+		<div data-role="content">
+			<p>This is Second Page.</p>
+		</div>
+
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Footer</h4>			
+		</div>
+	</div>
+
+</body>
+</html>
